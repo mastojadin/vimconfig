@@ -15,6 +15,7 @@ Plugin 'rakr/vim-one'
 Plugin 'preservim/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
+Plugin 'bfrg/vim-cpp-modern'
 
 "to here
 
@@ -29,19 +30,20 @@ let g:airline_theme='one'
 colorscheme one
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'default'
+let g:airline_symbols = {}
+let g:airline_symbols.colnr = ' '
 
 let NERDTreeShowHidden=1
 
-set background=dark
-set laststatus=2
-set tabstop=4
-set softtabstop=0 noexpandtab
+set tabstop=4 softtabstop=4
 set shiftwidth=4
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-set autoindent
+set expandtab
+set smartindent
+
+set smartcase
+set noswapfile
+set incsearch
+set hlsearch
 
 set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatusLineFlag()}
